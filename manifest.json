@@ -1,0 +1,24 @@
+{
+    "name": "Shorts Remover",
+    "description": "Dieses Addon leitet dich von einer Youtube-Shorts URL auf die normale watch-URL um.",
+    "version": "1.0",
+    "icons": {
+        "128": "favicon.png"
+    },
+    "permissions": [
+        "tabs"
+    ],
+    "host_permissions": [
+        "https://*.youtube.com/*"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://*.youtube.com/*"],
+            "js": [ "index.js" ]
+        }
+    ],
+    "manifest_version": 3
+}
